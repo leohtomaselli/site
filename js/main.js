@@ -67,7 +67,7 @@ if (statsSection) statsObserver.observe(statsSection);
 
 // ---- Scroll Reveal ----
 const revealElements = document.querySelectorAll(
-  '.module-card, .how-step, .price-example, .pricing-box, .partner-logo, .contact__info, .contact__form, .stat'
+  '.module-card, .how-step, .price-example, .pricing-box, .partner-logo, .contact__info, .contact__form, .stat, .btn--demo-large'
 );
 
 const revealObserver = new IntersectionObserver((entries) => {
