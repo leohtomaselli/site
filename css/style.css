@@ -186,8 +186,6 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 }
 .header.scrolled .nav__link { color: var(--color-text); }
 .header.scrolled .nav__link:hover { color: var(--color-secondary); }
-.header.scrolled .header__logo .logo-rms { color: var(--color-primary); }
-.header.scrolled .header__logo .logo-tec { color: var(--color-secondary); }
 
 .header__inner {
   display: flex;
@@ -196,14 +194,16 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 }
 
 .header__logo {
-  font-size: 1.4rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
-.logo-rms { color: var(--color-white); }
-.logo-tec { color: var(--color-accent); font-size: 0.9em; }
+.logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+}
 
 .nav {
   display: flex;
