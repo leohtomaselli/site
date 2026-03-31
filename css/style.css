@@ -199,7 +199,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   align-items: center;
 }
 .logo-img {
-  height: 44px;
+  height: 80px;
   width: auto;
   display: block;
   border-radius: var(--radius-sm);
