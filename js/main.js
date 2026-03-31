@@ -93,7 +93,7 @@ document.head.insertAdjacentHTML('beforeend', `
 `);
 
 // ---- Active Nav Link ----
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll('section[id], #sobre');
 const navLinks = document.querySelectorAll('.nav__link');
 
 const sectionObserver = new IntersectionObserver((entries) => {
