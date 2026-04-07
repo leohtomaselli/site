@@ -152,6 +152,46 @@ if (form) {
   });
 }
 
+// ---- Pricing Calculator ----
+const fleetRange = document.getElementById('fleet-range');
+const fleetVal = document.getElementById('fleet-val');
+const priceTotal = document.getElementById('price-total');
+const priceAvg = document.getElementById('price-avg');
+
+if (fleetRange) {
+  const updatePrice = () => {
+    const qty = parseInt(fleetRange.value, 10);
+    fleetVal.textContent = qty;
+
+    let total = 0;
+    if (qty <= 10) {
+      total = qty * 18;
+    } else {
+      total = (10 * 18) + ((qty - 10) * 15);
+    }
+
+    const avg = total / qty;
+
+    priceTotal.textContent = `R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
+    priceAvg.textContent = `R$ ${avg.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
+  };
+
+  fleetRange.addEventListener('input', updatePrice);
+  updatePrice(); // Initial call
+}
+
+// ---- Hero Parallax ----
+window.addEventListener('mousemove', (e) => {
+  const shapes = document.querySelectorAll('.shape');
+  const x = (e.clientX - window.innerWidth / 2) / 50;
+  const y = (e.clientY - window.innerHeight / 2) / 50;
+
+  shapes.forEach((shape, i) => {
+    const factor = (i + 1) * 0.5;
+    shape.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+  });
+});
+
 // ---- Hamburger animation ----
 document.head.insertAdjacentHTML('beforeend', `
   <style>
